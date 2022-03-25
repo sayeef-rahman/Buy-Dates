@@ -14,6 +14,8 @@
     font-size: xx-large;
 }
 .products-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     background-color: antiquewhite;
     margin-top: 30px;
     margin-left: 20px;
@@ -23,9 +25,12 @@
     font-weight: bold;
     font-size: xx-large;
 }
-@media screen and (max-width: 400px) {
+.title{
+    margin-bottom: 0;
+}
+@media screen and (max-width: 500px) {
     .shop-container{
-        display: block;
+        display: inline-block;
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -33,6 +38,12 @@
         margin: 0px;
         padding-left: 10px;
         padding-right: 10px;
+    }
+    
+}
+@media screen and (max-width: 400px) {
+    .products-container{
+        display: inline-block;
     }
     
 }
