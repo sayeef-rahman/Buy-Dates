@@ -10,8 +10,22 @@
     margin-left: 20px;
     background-color: coral;
     text-align: center;
+}
+.cart-title{
+    margin-bottom: 0px;
     font-weight: bold;
     font-size: xx-large;
+}
+
+.cart-product img{
+    height: 50px;
+    width: 50px;
+}
+.cart-product{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .products-container{
     display: grid;

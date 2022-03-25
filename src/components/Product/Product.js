@@ -4,12 +4,12 @@ import React from 'react';
 import './Product.css';
 
 const Product = (props) => {
-    const {product, handleAddToCart} = props;
+    const {product} = props;
     const {name,id,img, price}=product;
     // console.log(img);
     return (
         <div className='product'>
-            <img src={img} alt="" />
+            <img src={img} alt=""/>
             <div className='product-info'>
                 <p className='product-name'>{name}</p>
                 <p>Price: ${price}</p>
