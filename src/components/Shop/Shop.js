@@ -17,7 +17,6 @@ const Shop = () => {
     const handleAddToCart = (selectedProduct) =>{
         let newCart = [];
         const exists = cart.find(product =>product.id === selectedProduct.id);
-         console.log("Exists: ",exists);
         if(!exists){
             newCart = [...cart,selectedProduct];
             if(newCart.length <= 4){
@@ -28,6 +27,10 @@ const Shop = () => {
             alert("Already in Cart! Select Another One");
         }
     };
+    const chooseOne = () =>{
+        console.log("clicked");
+    };
+    
 
     return (
         <div className='shop-container'>
@@ -35,7 +38,7 @@ const Shop = () => {
                 <p className='cart-title'>Cart</p>
                 <Cart cart={cart}></Cart>
                 <div className='cart-btn-container'>
-                <button className='cart-btn'>Choose One</button>
+                <button className='cart-btn' onClick={chooseOne}>Choose One</button>
                 <button className='cart-btn'>Choose Again</button>
                 </div>
                 

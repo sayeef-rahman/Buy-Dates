@@ -7,9 +7,9 @@ const Cart = (props) => {
     return (
         <div className='cart-product'>
                 {cart.map((item) => (
-                        <h4 key={item.id} >
-                        <img src={item.image} alt="" /> {item.name}
-                        </h4>
+                        <h6 key={item.id} >
+                        <img src={item.img} alt="" /> {item.name}
+                        </h6>
                         )
                     )
                 }
@@ -17,3 +17,7 @@ const Cart = (props) => {
     );
 };
 export default Cart;
+
+{/* <h4 key={item.id} >
+<img src={item.img} alt="" /> {item.name}
+</h4> */}

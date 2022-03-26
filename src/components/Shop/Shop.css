@@ -22,10 +22,13 @@
     width: 50px;
 }
 .cart-product{
-    margin: 10px;
-    font-size: 25px;
+    margin: 0;
     display: flex;
-    /* flex-flow: column; */
+    flex-flow: column;
+}
+.cart-product h6{
+    margin: 5px;
+    display: flex;
     align-items: center;
     justify-content: space-around;
 }
