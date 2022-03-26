@@ -27,8 +27,11 @@ const Shop = () => {
             alert("Already in Cart! Select Another One");
         }
     };
+    const chooseAgain = () =>{
+        setCart([]);
+    };
     const chooseOne = () =>{
-        console.log("clicked");
+        console.log(setCart);
     };
     
 
@@ -38,8 +41,8 @@ const Shop = () => {
                 <p className='cart-title'>Cart</p>
                 <Cart cart={cart}></Cart>
                 <div className='cart-btn-container'>
-                <button className='cart-btn' onClick={chooseOne}>Choose One</button>
-                <button className='cart-btn'>Choose Again</button>
+                <button className='cart-btn' onClick={chooseOne} >Choose One</button>
+                <button className='cart-btn' onClick={chooseAgain}>Choose Again</button>
                 </div>
                 
             </div>
