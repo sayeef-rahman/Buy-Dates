@@ -6,10 +6,14 @@ const Cart = (props) => {
     console.log(cart);
     return (
         <div className='cart-product'>
-                <img src={cart.map(date => date.img)} alt="" />
-                <p>{cart.map(date => date.name)}</p>
+                {cart.map((item) => (
+                        <h4 key={item.id} >
+                        <img src={item.image} alt="" /> {item.name}
+                        </h4>
+                        )
+                    )
+                }
         </div>
     );
 };
-
 export default Cart;
