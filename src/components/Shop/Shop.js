@@ -14,27 +14,31 @@ const Shop = () => {
         .then(data => setProducts(data))
     },[]);
 
-    const handleAddToCart = (products) =>{
-        // cart = products;
-        // console.log(products);
-        // console.log("Cart: ",cart);
-        const newCart = [...cart,products];
-        // console.log("New Cart Length: ",newCart.length);
-        if(newCart.length <= 4){
-            setCart(newCart);
+    const handleAddToCart = (selectedProduct) =>{
+        let newCart = [];
+        const exists = cart.find(product =>product.id === selectedProduct.id);
+         console.log("Exists: ",exists);
+        if(!exists){
+            newCart = [...cart,selectedProduct];
+            if(newCart.length <= 4){
+                setCart(newCart);
+            }
         }
-        
+        else{
+            alert("Already in Cart! Select Another One");
+        }
     };
 
     return (
         <div className='shop-container'>
             <div className="cart-container">
                 <p className='cart-title'>Cart</p>
-                <div>
-                    <Cart cart={cart}></Cart><br/>
-                {/* <img src={cart.map(date => date.img)} alt="" />
-                <p>{cart.map(date => date.name)}</p> */}
+                <Cart cart={cart}></Cart>
+                <div className='cart-btn-container'>
+                <button className='cart-btn'>Choose One</button>
+                <button className='cart-btn'>Choose Again</button>
                 </div>
+                
             </div>
             <div className="products-container">
             {
@@ -46,7 +50,6 @@ const Shop = () => {
                     </Product>)
                 }
             </div>
-            
         </div>
     );
 };
