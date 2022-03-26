@@ -3,7 +3,7 @@ import './Cart.css'
 
 const Cart = (props) => {
     const {cart}=props;
-    console.log(cart);
+    //console.log(cart);
     return (
         <div className='cart-product'>
                 {cart.map((item) => (

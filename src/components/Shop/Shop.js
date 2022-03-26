@@ -26,15 +26,19 @@ const Shop = () => {
         else{
             alert("Already in Cart! Select Another One");
         }
+        // return newCart;
     };
     const chooseAgain = () =>{
+        // console.log(setCart());
         setCart([]);
     };
     const chooseOne = () =>{
-        console.log(setCart);
+        if(cart.length>0){
+        const anyOneItem= Math.floor(Math.random() * cart.length);
+        setCart([cart[anyOneItem]]);
+        }
     };
     
-
     return (
         <div className='shop-container'>
             <div className="cart-container">
