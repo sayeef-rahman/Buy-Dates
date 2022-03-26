@@ -5,7 +5,7 @@ table {
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 70%;
   }
   
   td, th {
@@ -18,9 +18,16 @@ table {
     background-color: #dddddd;
   }
   .q-2{
-      margin: 0 20px;
-    text-align: justify;
+      margin: 0 250px;
+      text-align: justify;
   }
   .q-2 h2{
       text-align: center;
   }
+
+  @media screen and (max-width: 400px) {
+    .q-2{
+        margin: 0 20px;
+      text-align: justify;
+    }
+}
